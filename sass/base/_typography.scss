@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@400;700&display=swap");
+
+//-------------------------Typography variables-----------------------------//
+$primary-font: "DM Sans", sans-serif;
+$primary-font-regular: 400;
+$primary-font-bold: 700;
+
+%paragraph-style {
+  font-family: $primary-font;
+}
+
+.paragraph-style {
+  @extend %paragraph-style;
+
+  &--1 {
+    @extend %paragraph-style;
+    font-weight: $primary-font-bold;
+    font-size: 1.5rem;
+    color: $color-neutral-black;
+  }
+
+  &--2 {
+    @extend %paragraph-style;
+    font-weight: $primary-font-regular;
+    font-size: 0.875rem;
+    color: $color-neutral-white;
+    &:hover {
+      color: $color-delicate-white;
+      cursor: pointer;
+    }
+  }
+
+  &--white {
+    color: $color-neutral-white;
+    &:hover {
+      color: $color-delicate-white;
+      cursor: pointer;
+    }
+  }
+
+  &--small {
+    font-size: 1.25rem;
+  }
+}
